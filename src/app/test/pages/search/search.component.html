@@ -1,0 +1,23 @@
+<div class="animate__animated animate__fadeIn animate__faster">
+    <div class="row">
+        <div class="col">
+        <div class="nav-header">
+            <app-test-input
+                (onEnter)="buscar( $event )"
+                placeholder="Buscar articulo...">
+            </app-test-input>
+        </div>
+            <div *ngIf="mostrarResultado">
+                <app-test-result (data)="data">
+                </app-test-result>
+              </div>   
+        </div>
+    </div>
+</div>
+
+<div *ngIf="data.length > 0" class="row">
+    <div class="col">
+        <app-test-result [data]="data">
+        </app-test-result>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="animate__animated animate__fadeIn animate__faster">
+    <div class="row">
+        <div class="col">
+        <div class="nav-header">
+            <app-test-input
+                (onEnter)="buscar( $event )"
+                placeholder="Buscar articulo...">
+            </app-test-input>
+        </div>
+            <!-- <div *ngIf="mostrarResultado">
+                <app-test-result (data)="data">
+                </app-test-result>
+              </div>    -->
+        </div>
+    </div>
+</div>
+<div class="ui-vip-core">
+    <div *ngIf="item" class="ui-pdp-container ui-pdp-container--pdp">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="row"> 
+                    <div class="col">
+                        <img [src]="item.item.picture">
+                    </div> 
+                </div>
+                <div class="row"> 
+                    <div class="col">
+                        {{item.item.price!.amount | currency}}
+                    </div> 
+                </div>
+            </div>
+            <div class="col-sm-6">
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {{item.item.title}}
+            </div>
+        </div>
+    </div>
+</div>

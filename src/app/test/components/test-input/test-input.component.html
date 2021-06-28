@@ -1,0 +1,14 @@
+<div class="nav-header">
+    <a class="nav-logo" href="#" tabindex="2">Mercado Libre Colombia - Donde comprar y vender de todo</a>
+    <div class="nav-bounds nav-bounds-with-cart nav-bounds-with-cp">
+        <form (ngSubmit)="buscar()" autocomplete="off" class="nav-search nav-search-with-sugestions">
+            <input type="text"
+                   name="termino"
+                   class="form-control nav-search-input"
+                   [(ngModel)]="termino"
+                   [placeholder]="placeholder"/>
+        </form>
+    </div>
+    
+</div>
+
